@@ -6,6 +6,6 @@
  Uploaders: Jeremy Bicha <jbicha@debian.org>
 -Build-Depends: debhelper-compat (= 13),
 +Build-Depends: debhelper-compat (= 12),
+                doxygen <!nodoc>,
+                graphviz <!nodoc>,
                 libasound2-dev,
-                libbluetooth-dev,
-                libdbus-1-dev,

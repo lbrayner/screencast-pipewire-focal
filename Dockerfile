@@ -146,18 +146,21 @@ RUN cd /src/mini-soong-*/ \
 
 RUN cd /src/libldac-*/ \
         && quilt import /patch/libldac/* \
+        && quilt push -af \
         && dch -i "Focal backport" \
         && dpkg-buildpackage -b -uc -us \
         && dpkg -i ../libldacbt*.deb
 
 RUN cd /src/libopenaptx-*/ \
         && quilt import /patch/libopenaptx/* \
+        && quilt push -af \
         && dch -i "Focal backport" \
         && dpkg-buildpackage -b -uc -us \
         && dpkg -i ../libopenaptx-dev*.deb ../libopenaptx0_*.deb
 
 RUN cd /src/pipewire-*/ \
         && quilt import /patch/pipewire/* \
+        && quilt push -af \
         && dch -i "Focal backport" \
         && dpkg-buildpackage -b -uc -us \
         && dpkg -i ../libpipewire-0.3*.deb \
@@ -169,6 +172,7 @@ RUN cd /src/pipewire-*/ \
 
 RUN cd /src/xdg-desktop-portal-1*/ \
         && quilt import /patch/xdg-desktop-portal/* \
+        && quilt push -af \
         && dch -i "Enable pipewire" \
         && dpkg-buildpackage -b -uc -us \
         && dpkg -i ../xdg-desktop-portal_*.deb ../xdg-desktop-portal-dev_*.deb

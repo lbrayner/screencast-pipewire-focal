@@ -171,9 +171,6 @@ RUN cd /src/pipewire-*/ \
         ../libspa-0.2-dev_*.deb
 
 RUN cd /src/xdg-desktop-portal-1*/ \
-        && quilt import /patch/xdg-desktop-portal/* \
-        && quilt push -af \
-        && dch -i "Enable pipewire" \
         && dpkg-buildpackage -b -uc -us \
         && dpkg -i ../xdg-desktop-portal_*.deb ../xdg-desktop-portal-dev_*.deb
 

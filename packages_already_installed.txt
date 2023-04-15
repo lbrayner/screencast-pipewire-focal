@@ -1,0 +1,6 @@
+gir1.2-mutter-6
+libmutter-6-0
+mutter-common
+mutter
+xdg-desktop-portal-gtk
+xdg-desktop-portal

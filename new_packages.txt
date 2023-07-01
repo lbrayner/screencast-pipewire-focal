@@ -12,4 +12,3 @@ pipewire
 pipewire-audio-client-libraries
 pipewire-bin
 pipewire-doc
-pipewire-tests

@@ -5,7 +5,8 @@ docker build -t screencast-pipewire-focal .
 mkdir debs
 docker run -it --rm -v ./debs:/debs screencast-pipewire-focal bash -c 'cp /src/*.deb /debs'
 # install mutter and its dependencies
-find debs -type f | grep -f packages_already_installed.txt -f new_packages.txt | xargs sudo dpkg -i
+find debs -type f | grep -f packages_already_installed.txt -f new_packages.txt | \
+    grep -v --regexp=-dev --regexp=-tests | xargs sudo dpkg -i
 ```
 
 Enable pipewire services:

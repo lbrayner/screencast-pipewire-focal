@@ -11,4 +11,3 @@ openaptx-utils
 pipewire
 pipewire-audio-client-libraries
 pipewire-bin
-pipewire-doc
